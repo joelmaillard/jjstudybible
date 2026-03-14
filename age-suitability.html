@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Suitability - J&amp;J Study Bible</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a2e; background: #f8f9fc; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d5e 50%, #1a1a2e 100%);
+            color: #fff;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .header a.back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: color 0.2s;
+        }
+        .header a.back:hover { color: #c9a84c; }
+        .header .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .header img { width: 40px; height: 40px; border-radius: 10px; }
+        .header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px 64px;
+        }
+        .content h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 20px;
+            font-weight: 600;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: #1a1a2e;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f5;
+        }
+        .content h2:first-child { margin-top: 0; }
+        .content p { margin-bottom: 14px; font-size: 15px; color: #444; }
+        .content ul { padding-left: 20px; margin-bottom: 14px; }
+        .content li { margin-bottom: 8px; font-size: 15px; color: #444; }
+        .content a { color: #4a4a8a; text-decoration: underline; text-decoration-color: rgba(74,74,138,0.3); transition: text-decoration-color 0.2s; }
+        .content a:hover { text-decoration-color: #4a4a8a; }
+
+        .rating-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+            margin-bottom: 32px;
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+        }
+        .rating-badge {
+            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .rating-badge.green { background: linear-gradient(135deg, #2d8a4e, #3da863); }
+        .rating-badge.amber { background: linear-gradient(135deg, #c9874c, #d4a04c); }
+        .rating-info h3 { font-size: 16px; font-weight: 600; color: #1a1a2e; margin-bottom: 4px; }
+        .rating-info p { margin-bottom: 0; }
+
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 13px;
+            color: #aaa;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a class="back" href="./">&larr; Back to home</a>
+        <div class="logo">
+            <img src="icon.png" alt="J&amp;J Study Bible" />
+            <h1>Age Suitability</h1>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="rating-card">
+            <div class="rating-badge green">12+</div>
+            <div class="rating-info">
+                <h3>Bible Study Features</h3>
+                <p>The app is suitable for users aged 12 and over who want to study the Bible. All Bible texts, commentary, Strong's Concordance, cross-references, notes, highlights, and bookmarks are available without restriction.</p>
+            </div>
+        </div>
+
+        <div class="rating-card">
+            <div class="rating-badge amber">16+</div>
+            <div class="rating-info">
+                <h3>AI Study Assistant</h3>
+                <p>The AI-powered Bible study assistant is restricted to users aged 16 and over. Users under 16 can use all other features of the app but will not have access to the AI chat functionality.</p>
+            </div>
+        </div>
+
+        <h2>About the App</h2>
+        <p>J&amp;J Study Bible is a free Bible study app designed for personal scripture study. It includes multiple Bible translations (KJV, WEB, Louis Segond), Strong's Concordance with original Hebrew and Greek definitions, Matthew Henry's Commentary, and over 432,000 cross-reference pairs.</p>
+
+        <h2>AI Safety Measures</h2>
+        <p>The AI study assistant includes multiple layers of content safety:</p>
+        <ul>
+            <li>The assistant is restricted to Bible-related topics only</li>
+            <li>All AI processing runs locally on the device — no data is sent to external servers</li>
+            <li>Content filtering ensures age-appropriate, scripture-focused responses</li>
+            <li>Off-topic or inappropriate requests are declined by the assistant</li>
+            <li>The AI age restriction (16+) provides an additional safeguard for younger users</li>
+        </ul>
+
+        <h2>Parental Guidance</h2>
+        <p>While the app is designed to be safe and educational, we recommend that parents and guardians:</p>
+        <ul>
+            <li>Review the app's features with their child before use</li>
+            <li>Encourage direct scripture reading alongside any AI-assisted study</li>
+            <li>Use iOS Screen Time or parental controls to manage app usage as needed</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>If you have questions about age suitability or content safety, contact us at <a href="mailto:maillard007@gmail.com">maillard007@gmail.com</a>.</p>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Joel Maillard. All rights reserved.
+    </div>
+</body>
+</html>

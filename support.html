@@ -4,48 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Support - J&amp;J Study Bible</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Georgia, 'Times New Roman', serif; color: #2c2c2c; background: #faf8f5; line-height: 1.7; }
-        .container { max-width: 640px; margin: 0 auto; padding: 48px 24px; }
-        h1 { font-size: 24px; margin-bottom: 4px; }
-        .subtitle { color: #666; font-size: 15px; margin-bottom: 32px; }
-        h2 { font-size: 18px; margin-top: 32px; margin-bottom: 8px; }
-        p, li { margin-bottom: 12px; }
-        ul { padding-left: 24px; }
-        a { color: #5b4a3f; }
-        .back { display: inline-block; margin-bottom: 24px; color: #999; text-decoration: none; font-size: 14px; }
-        .back:hover { color: #5b4a3f; }
-        .email-link { display: inline-block; margin-top: 8px; padding: 12px 24px; background: #5b4a3f; color: #fff; text-decoration: none; border-radius: 6px; font-size: 15px; }
-        .email-link:hover { background: #8b7355; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; color: #1a1a2e; background: #f8f9fc; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d2d5e 50%, #1a1a2e 100%);
+            color: #fff;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .header a.back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: color 0.2s;
+        }
+        .header a.back:hover { color: #c9a84c; }
+        .header .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+        .header img { width: 40px; height: 40px; border-radius: 10px; }
+        .header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 28px;
+            font-weight: 700;
+        }
+        .header .subtitle { color: rgba(255,255,255,0.6); font-size: 15px; margin-top: 8px; }
+
+        .content {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 48px 24px 64px;
+        }
+
+        .contact-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid rgba(0,0,0,0.04);
+            margin-bottom: 48px;
+        }
+        .contact-card p { font-size: 15px; color: #666; margin-bottom: 16px; }
+        .contact-card .email-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #1a1a2e, #2d2d5e);
+            color: #fff;
+            text-decoration: none;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .contact-card .email-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(26,26,46,0.3);
+        }
+
+        .content h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: #1a1a2e;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 12px;
+            border: 1px solid #eee;
+            transition: border-color 0.2s;
+        }
+        .faq-item:hover { border-color: #c9a84c; }
+        .faq-item .question {
+            font-weight: 600;
+            font-size: 15px;
+            color: #1a1a2e;
+            margin-bottom: 8px;
+        }
+        .faq-item .answer {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.6;
+        }
+        .faq-item .answer a { color: #4a4a8a; }
+
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            font-size: 13px;
+            color: #aaa;
+            background: #fff;
+            border-top: 1px solid #eee;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a class="back" href="./">&larr; Back</a>
-        <h1>Support</h1>
-        <p class="subtitle">Need help with J&amp;J Study Bible? We're here to help.</p>
+    <div class="header">
+        <a class="back" href="./">&larr; Back to home</a>
+        <div class="logo">
+            <img src="icon.png" alt="J&amp;J Study Bible" />
+            <h1>Support</h1>
+        </div>
+        <p class="subtitle">Need help? We're here for you.</p>
+    </div>
 
-        <h2>Contact Us</h2>
-        <p>For questions, bug reports, or feedback, send us an email:</p>
-        <a class="email-link" href="mailto:maillard007@gmail.com">maillard007@gmail.com</a>
+    <div class="content">
+        <div class="contact-card">
+            <p>For questions, bug reports, or feedback, send us an email:</p>
+            <a class="email-btn" href="mailto:maillard007@gmail.com">maillard007@gmail.com</a>
+        </div>
 
         <h2>Common Questions</h2>
 
-        <p><strong>How do I download an AI model?</strong></p>
-        <p>Go to the AI Chat tab, select a model from the picker, and tap Download. The app will download the model file over Wi-Fi. Models range from 400 MB to 2 GB depending on quality level.</p>
+        <div class="faq-item">
+            <div class="question">How do I download an AI model?</div>
+            <div class="answer">Go to the AI Chat tab, select a model from the picker, and tap Download. The app will download the model file over Wi-Fi. Models range from 400 MB to 2 GB depending on quality level.</div>
+        </div>
 
-        <p><strong>Can I use the app offline?</strong></p>
-        <p>Yes. All Bible texts, commentary, and concordance data are included in the app. The AI assistant also works offline once a model is downloaded. The only feature requiring internet is the initial model download.</p>
+        <div class="faq-item">
+            <div class="question">Can I use the app offline?</div>
+            <div class="answer">Yes. All Bible texts, commentary, and concordance data are included in the app. The AI assistant also works offline once a model is downloaded. The only feature requiring internet is the initial model download.</div>
+        </div>
 
-        <p><strong>How do I cancel a subscription?</strong></p>
-        <p>Donations are managed through your Apple ID. Go to Settings &gt; Apple ID &gt; Subscriptions on your device, or visit <a href="https://apps.apple.com/account/subscriptions">Manage Subscriptions</a>.</p>
+        <div class="faq-item">
+            <div class="question">How do I cancel a subscription?</div>
+            <div class="answer">Donations are managed through your Apple ID. Go to Settings &gt; Apple ID &gt; Subscriptions on your device, or visit <a href="https://apps.apple.com/account/subscriptions">Manage Subscriptions</a>.</div>
+        </div>
 
-        <p><strong>How do I delete my data?</strong></p>
-        <p>All data (notes, bookmarks, highlights, chat history) is stored locally on your device. You can clear chat history from within the app, or delete the app entirely to remove all data.</p>
+        <div class="faq-item">
+            <div class="question">How do I delete my data?</div>
+            <div class="answer">All data (notes, bookmarks, highlights, chat history) is stored locally on your device. You can clear chat history from within the app, or delete the app entirely to remove all data.</div>
+        </div>
 
-        <p><strong>The AI gave an inaccurate answer.</strong></p>
-        <p>The AI study assistant is a tool to help with Bible study, not a replacement for direct scripture reading. Always verify AI responses against the actual Bible text. If you encounter persistent issues, please report them to us.</p>
+        <div class="faq-item">
+            <div class="question">The AI gave an inaccurate answer.</div>
+            <div class="answer">The AI study assistant is a tool to help with Bible study, not a replacement for direct scripture reading. Always verify AI responses against the actual Bible text. If you encounter persistent issues, please report them to us.</div>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2025 Joel Maillard. All rights reserved.
     </div>
 </body>
 </html>
